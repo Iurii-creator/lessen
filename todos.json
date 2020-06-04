@@ -1,1 +1,12 @@
-[{"number":1,"title":"feed cat","completed":true},{"number":2,"title":"buy products","completed":true},{"number":3,"title":"watch TV","completed":false}]
+[
+    {
+        "number": 1,
+        "title": "watch TV",
+        "completed": false
+    },
+    {
+        "number": 2,
+        "title": "game",
+        "completed": false
+    }
+]
