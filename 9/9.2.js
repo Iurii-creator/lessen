@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 let todos = JSON.parse(fs.readFileSync("todos.json"));
-let num = 0
+let num = 0;
 for (let cas of todos) {
   let readStr;
   num = num + 1;
@@ -11,5 +11,5 @@ for (let cas of todos) {
     readStr = "[ ]";
   }
 
-  console.log(readStr+ " " + cas.number + ". " + cas.title);
+  console.log(readStr+ " " + num + ". " + cas.title);
 }

@@ -4,22 +4,27 @@ let todos = JSON.parse(fs.readFileSync("todos.json"));
 
 const readlineSync = require("readline-sync");
 
-let num = parseInt(readlineSync.question(" What kind of case number is needed ? "))
+let number = parseInt(readlineSync.question(" What kind of case number is needed ? \n>"))
 
 let readStr;
 
-if (todos.includes(todos[num - 1])) {
-    if (todos[num - 1].completed === true) {
-        todos[num - 1].completed = false;
-        readStr = "[ ]";
-        fs.writeFileSync("todos.json", JSON.stringify(todos));
-        console.log(readStr + " " + todos[num - 1].number + ". " + todos[num - 1].title);
-    } else if (todos[num - 1].completed === false) {
-        todos[num - 1].completed = true;
-        readStr = "[x]";
-        fs.writeFileSync("todos.json", JSON.stringify(todos));
-        console.log(readStr + " " + todos[num - 1].number + ". " + todos[num - 1].title);
-    }
+
+if (number > todos.length) {
+    console.log("wrong number");
 } else {
-    console.log("wrong number")
+    for (let i = 0; i < todos.length; ++i) {
+        
+        if (number - 1 === i) {
+            todos[i].completed = !todos[i].completed
+            
+            if (todos[i].completed) {
+                readStr = "[x]";
+            } else {
+                readStr = "[ ]";
+            }
+
+            console.log(readStr + " " +(i + 1) + "." + todos[i].title);
+        }
+    }
 }
+fs.writeFileSync("todos.json", JSON.stringify(todos));

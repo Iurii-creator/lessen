@@ -1,0 +1,24 @@
+{
+  "name": "lessen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iurii-creator/lessen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iurii-creator/lessen/issues"
+  },
+  "homepage": "https://github.com/Iurii-creator/lessen#readme",
+  "dependencies": {
+    "@types/node": "^14.0.1",
+    "i": "^0.3.6",
+    "readline-sync": "^1.4.10"
+  }
+}

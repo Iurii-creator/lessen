@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Букварь",
+        "year": 2010,
+        "read": true
+    },
+    {
+        "name": "Колобок",
+        "year": 1921,
+        "read": false
+    },
+    {
+        "name": "Идиот",
+        "year": 1856,
+        "read": false
+    },
+    {
+        "name": "100 лет одиночества",
+        "year": 1920,
+        "read": true
+    }
+]

@@ -12,10 +12,6 @@ for ( let i = 0; i < todos.length; ++i) {
         delet += 1
     }
 }
-for (let i = 0; i < newtodos.length; ++i) {
-    newtodos[i].number = i + 1
-}
-
 fs.writeFileSync("todos.json", JSON.stringify(newtodos));
 
 console.log(delet + " " + "todos removed")

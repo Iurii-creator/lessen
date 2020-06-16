@@ -5,8 +5,7 @@ let todos = JSON.parse(fs.readFileSync("todos.json"));
 const readlineSync = require("readline-sync");
 
 let todo = {
-    number: todos[(todos.length-1)].number+1,
-    title: readlineSync.question(" todo ? "),
+    title: readlineSync.question(" todo ?\n> "),
     completed: false,
 }
 
